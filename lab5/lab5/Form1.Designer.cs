@@ -36,6 +36,8 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.box = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -49,7 +51,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(36, 211);
+            this.button1.Location = new System.Drawing.Point(84, 200);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -59,14 +61,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(36, 68);
+            this.textBox1.Location = new System.Drawing.Point(107, 26);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(126, 211);
+            this.button2.Location = new System.Drawing.Point(174, 200);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
@@ -76,7 +78,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(219, 211);
+            this.button3.Location = new System.Drawing.Point(267, 200);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 4;
@@ -86,7 +88,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(174, 67);
+            this.textBox2.Location = new System.Drawing.Point(157, 67);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
@@ -100,16 +102,38 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(36, 118);
+            this.textBox4.Location = new System.Drawing.Point(36, 67);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 7;
+            // 
+            // box
+            // 
+            this.box.FormattingEnabled = true;
+            this.box.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.box.Location = new System.Drawing.Point(36, 134);
+            this.box.Name = "box";
+            this.box.Size = new System.Drawing.Size(121, 21);
+            this.box.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(36, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Seleccione alguno";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(450, 261);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.box);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
@@ -120,6 +144,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,6 +160,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.ComboBox box;
+        private System.Windows.Forms.Label label2;
     }
 }
 

@@ -23,6 +23,18 @@ namespace lab5
         string MyString = "Hello World";
         public int[] array = { 5, 10, 15, 20 };
 
+        private void seleccionar_box()
+        {
+            if (box.SelectedItem.Equals(content))
+            {
+                MessageBox.Show("Hello1");
+            }
+            else
+            {
+                MessageBox.Show("Hello2");
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             textBox1.Text = "Hello World";
@@ -33,7 +45,7 @@ namespace lab5
             {
                 textBox4.Text +=  array + "-" ;
             }
-            
+            seleccionar_box();
         }
 
 
@@ -63,6 +75,11 @@ namespace lab5
                 button3.Enabled = false;
             }
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            box.SelectedIndex = 0;
         }
     }
 }
